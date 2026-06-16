@@ -1,195 +1,531 @@
-ì<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> GODE-TECH DEV </title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://kit.fontawesome.com/e032205f7a.js" crossorigin="anonymous"></script>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adewale Godspower | Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e032205f7a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
 
-    <body>
-        <div id="header">
-            <div class="container">
-                <nav>
-                    <img src="images/logo.png" class="logo">
-                        <ul id="sidemenu">
-                            <li><a href="#header">HOME</a></li>
-                            <li><a href="#about">ABOUT</a></li>
-                            <li><a href="#services">SERVICES</a></li>
-                            <li><a href="#portfolio">WORKS</a></li>
-                            <li><a href="#contact">CONTACT</a></li>
-                            <i class="fas fa-times" onclick="closemenu()"></i>
-                        </ul>
-                        <i class="fas fa-bars" onclick="openmenu()"></i>
-                </nav>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">GODE-TECH</span>
+            </a>
+            <ul class="nav-links" id="sidemenu">
+                <li><a href="#header" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Works</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button class="close-menu" onclick="closemenu()" aria-label="Close menu"><i class="fas fa-times"></i></button></li>
+            </ul>
+            <button class="menu-toggle" onclick="openmenu()" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
-                <div class="header-text">
-                    <p> WEB DEVELOPER </p>
-                    <h1> Hi, I'm <span>ADEWALE GODSPOWER</span><br> From Nigeria </h1>
-                    
+    <!-- Hero Section -->
+    <section id="header" class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge reveal-up">
+                    <span class="pulse-dot"></span>
+                    Available for freelance work
+                </div>
+                <h1 class="hero-title reveal-up">
+                    Hi, I'm <span class="text-gradient">Adewale Godspower</span>
+                </h1>
+                <p class="hero-subtitle reveal-up">
+                    Creative <span class="typewriter" data-text="Web Developer"></span> from Nigeria crafting modern digital experiences.
+                </p>
+                <p class="hero-description reveal-up">
+                    PKA Godetech — I build responsive websites, design mobile applications, and transform data into insights. Passionate about clean code, beautiful interfaces, and results that matter.
+                </p>
+                <div class="hero-cta reveal-up">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Let's Talk</span>
+                    </a>
+                </div>
+                <div class="hero-stats reveal-up">
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
 
-        <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1"><img src="images/gpp.png"></div>
-                    <div class="about-col-2">
-                        <h1 class="subtitle"> About Me </h1>
-                        <p> I'm a website developer and an intending full-stack developer. My passion for coding brought me into the developer's space. i have full experience of HTML, CSS, JS, PHP, React, Node js, python to mention a few. I've listed my skills and experiences below. I am open to learning and open to networking.</p>
-                            
-                            <div class="tab-titles">
-                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                                <p class="tab-links" onclick="opentab('education')">Academics</p>
-                            </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal-left">
+                    <div class="image-frame">
+                        <img src="images/gpp.png" alt="Adewale Godspower">
+                    </div>
+                    <div class="experience-card">
+                        <span class="exp-number">5+</span>
+                        <span class="exp-text">Years of<br>Coding Experience</span>
+                    </div>
+                </div>
+                <div class="about-content reveal-right">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Passionate Developer, <span class="text-gradient">Lifelong Learner</span></h2>
+                    <p class="about-text">
+                        I'm a website developer and aspiring full-stack developer based in Nigeria. My passion for coding brought me into the developer's space, and I've since gained experience with HTML, CSS, JavaScript, PHP, React, Node.js, Python, and more.
+                    </p>
+                    <p class="about-text">
+                        I'm open to learning, networking, and collaborating on meaningful projects. Below you'll find my skills, experience, and academic background.
+                    </p>
 
-                            <div class="tab-contents active-tab" id="skills">
-                                <ul>
-                                    <li><span>Web development</span><br>Designing and developing<br>webpages/websites </li>
-                                    <li><span>App development</span><br>Building IOS/Android Apps</li>
-                                    <li><span>Data Analysis</span><br>Data analysis using python</li>
-                                    <li><span>Extras</span><br>High Adaptability to AI Skills<br>Cold Email<br>CRM and Data Management<br>Project Management Support</li>
-                                </ul>
+                    <div class="tabs">
+                        <div class="tab-titles">
+                            <button class="tab-link active-link" onclick="opentab('skills', this)">
+                                <i class="fas fa-code"></i> Skills
+                            </button>
+                            <button class="tab-link" onclick="opentab('experience', this)">
+                                <i class="fas fa-briefcase"></i> Experience
+                            </button>
+                            <button class="tab-link" onclick="opentab('education', this)">
+                                <i class="fas fa-graduation-cap"></i> Academics
+                            </button>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <span class="skill-name">Web Development</span>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">App Development <span class="skill-note">(still learning)</span></span>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 20%"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Data Analysis</span>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">React & Node.js <span class="skill-note">(still learning)</span></span>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 20%"></div></div>
+                                </div>
                             </div>
-                            <div class="tab-contents" id="experience">
-                                <ul>
-                                    <li><span>Web development</span><br>website development <br></li>
-                                    <li><span>App development</span><br>freelance jobs</li>
-                                    <li><span>tutoring</span><br>progamming tutor <br>CNG companies</li>
-                                </ul>
-                            </div>
-                            <div class="tab-contents" id="education">
-                                <ul>
-                                    <li><span>2023</span><br>HND COMPUTER SCIENCE<br></li>
-                                    <li><span>2019</span><br>YPF MOBILE APP DEVELOPMENT<br></li>
-                                    <li><span>2017</span><br>OND COMPUTER SCIENCE<br></li>
-                                    <li><span>2017</span><br>CISCO NETWORKING<br></li>
-                                </ul>
-                            </div>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                            <ul class="timeline">
+                                <li class="timeline-item">
+                                    <span class="timeline-dot"></span>
+                                    <div class="timeline-content">
+                                        <span class="timeline-year">2022 - Present</span>
+                                        <h4>Web Developer</h4>
+                                        <p>Built and deployed websites including <strong>icondoors.com</strong>. Specialized in responsive design and modern UI.</p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <span class="timeline-dot"></span>
+                                    <div class="timeline-content">
+                                        <span class="timeline-year">2021 - 2022</span>
+                                        <h4>Mobile App Developer</h4>
+                                        <p>Completed freelance app projects for Android and iOS platforms using React Native and Java.</p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <span class="timeline-dot"></span>
+                                    <div class="timeline-content">
+                                        <span class="timeline-year">2020 - 2021</span>
+                                        <h4>Programming Tutor</h4>
+                                        <p>Taught programming at CNG companies, helping beginners transition into tech careers.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul class="timeline">
+                                <li class="timeline-item">
+                                    <span class="timeline-dot"></span>
+                                    <div class="timeline-content">
+                                        <span class="timeline-year">2026</span>
+                                        <h4>B.Sc Computer Science</h4>
+                                        <p>Crawford University</p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <span class="timeline-dot"></span>
+                                    <div class="timeline-content">
+                                        <span class="timeline-year">2022</span>
+                                        <h4>HND in Computer Science</h4>
+                                        <p>Ogun State Institute of Technology, Igbesa</p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <span class="timeline-dot"></span>
+                                    <div class="timeline-content">
+                                        <span class="timeline-year">2019</span>
+                                        <h4>YPF Mobile App Development</h4>
+                                        <p>Professional training in mobile application development.</p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <span class="timeline-dot"></span>
+                                    <div class="timeline-content">
+                                        <span class="timeline-year">2017</span>
+                                        <h4>OND in Computer Science</h4>
+                                        <p>Ogun State Institute of Technology, Igbesa</p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <span class="timeline-dot"></span>
+                                    <div class="timeline-content">
+                                        <span class="timeline-year">2017</span>
+                                        <h4>CISCO Networking</h4>
+                                        <p>Certified networking fundamentals training.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    </div>
-                    
+                </div>
             </div>
         </div>
+    </section>
 
-        <div id="services">
-            <div class="container">
-                <h1 class="subtitle"> My Services </h1>
-                <div class="services-list">
-                    <div>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">What I Do</span>
+                <h2 class="section-title">My <span class="text-gradient">Services</span></h2>
+                <p class="section-subtitle">I offer end-to-end digital solutions tailored to your needs.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal-up">
+                    <div class="service-icon">
                         <i class="fa-solid fa-code"></i>
-                        <h2>Web Development</h2>
-                        <p>Every brand, business, companies, needs quality website to showcase their offers for everyone to see. I buid and design websites, web-applications. I build to customers satisfaction.</p>
-                        <a href="#">Learn More</a>
                     </div>
-                    <div>
+                    <h3>Web Development</h3>
+                    <p>Every brand and business needs a quality website to showcase their offers. I design and build responsive websites and web applications that deliver results.</p>
+                    <a href="#contact" class="service-link">Start a Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal-up">
+                    <div class="service-icon">
                         <i class="fa-solid fa-mobile-screen-button"></i>
-                        <h2>App Design</h2>
-                        <p>I build and design various kinds of apps both android and IOS like e-commerce, business, personalization apps e.t.c using various platforms and languages. languages like Java, Kotlin, Python, ReactNative to mention a few. </p>
-                        <a href="#">Learn More</a>
                     </div>
-                    <div>
+                    <h3>App Design</h3>
+                    <p>I build Android and iOS applications including e-commerce, business, and personalization apps using Java, Kotlin, Python, and React Native.</p>
+                    <a href="#contact" class="service-link">Start a Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal-up">
+                    <div class="service-icon">
                         <i class="fa-solid fa-database"></i>
-                        <h2>Data Analysis</h2>
-                        <p>An organization has daily datas to deal with. Therefore, data analysis is crucial in every organization. i analyze data as a data analyst.</p>
-                        <a href="#">Learn More</a>
                     </div>
+                    <h3>Data Analysis</h3>
+                    <p>Organizations deal with data daily. I analyze data using Python to extract insights that help businesses make informed decisions.</p>
+                    <a href="#contact" class="service-link">Start a Project <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div id="portfolio">
-            <div class="container">
-                <h1 class="subtitle"> My Works </h1>
-                <div class="work-list">
-                    <div class="work">
-                        <img src="images/OIP.png">
-                        <div class="layer">
-                            <h3>Messaging App</h3>
-                            <p>The app enables you to message your friends, contacts around the world. Download it from .......</p>
-                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Featured <span class="text-gradient">Works</span></h2>
+                <p class="section-subtitle">A selection of projects I've worked on recently.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card reveal-up">
+                    <div class="portfolio-image">
+                        <img src="images/OIP.png" alt="Campus Print-Ease System">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Campus Print-Ease System</h3>
+                                <p>A smart campus printing solution that lets students upload and print documents seamlessly.</p>
+                                <a href="https://printease.page.gd/" target="_blank" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="work">
-                        <img src="images/music.jpg">
-                        <div class="layer">
-                            <h3>Music App</h3>
-                            <p>The app allows you listen to your musics and also listen to uploaded online musics for free. Download it from .......</p>
-                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="images/school.png">
-                        <div class="layer">
-                            <h3>GODE-TECH Institute</h3>
-                            <p>A site that allows you to learn web development, app development and data analysis free. <div class="new">Visit <a href="www.gode-tech.org">Gode-tech institute</a></div></p>
-        
-                        </div>
+                    <div class="portfolio-meta">
+                        <span class="portfolio-tag">Web App</span>
+                        <h3>Campus Print-Ease System</h3>
                     </div>
                 </div>
-                
-            </div>
-        </div>
-
-        <div id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 class="subtitle"> Contact Me</h1>
-                        <p><i class="fas fa-paper-plane"></i>adewalegodspower9@gmail.com</p>
-                        <p><i class="fas fa-phone-square-alt"></i>+234(0)7063791805</p>
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter-square"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                <div class="portfolio-card reveal-up">
+                    <div class="portfolio-image">
+                        <img src="images/music.jpg" alt="AI Powered Edu Tutor For High School">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>AI Powered Edu Tutor For High School</h3>
+                                <p>An AI-driven academic Q&A and learning resource platform for high school students.</p>
+                                <a href="https://aitutor.page.gd/?i=1" target="_blank" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
-                        <a href="images/ADEWALE, Godspower CV.pdf" download class="btn btn2">Download CV</a>
                     </div>
-                    <div class="contact-right">
-                        <form>
-                            <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="email" name="email" placeholder="Your Email" required>
-                            <textarea name="Message" row="6" placeholder="Your Message"></textarea>
-                            <button type="submit" class="btn btn2">Submit</button>
-                        </form>
+                    <div class="portfolio-meta">
+                        <span class="portfolio-tag">AI EdTech</span>
+                        <h3>AI Powered Edu Tutor For High School</h3>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal-up">
+                    <div class="portfolio-image">
+                        <img src="images/school.png" alt="Gode-Tech Institute">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>GODE-TECH Institute</h3>
+                                <p>Learn web development, app development, and data analysis.</p>
+                                <a href="https://gdtest.42web.io/?i=2" target="_blank" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-meta">
+                        <span class="portfolio-tag">Web Platform</span>
+                        <h3>GODE-TECH Institute</h3>
                     </div>
                 </div>
             </div>
-            <div class="copyright">
-                <p>Copyright @ Gode-tech<br>GODE-TECH dev community</p>
+            <div class="text-center reveal-up">
+                <a href="#contact" class="btn btn-outline">View All Projects</a>
             </div>
         </div>
+    </section>
 
-    <script>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Work <span class="text-gradient">Together</span></h2>
+                    <p class="contact-text">Have a project in mind? I'm always open to discussing new ideas, opportunities, and partnerships.</p>
 
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+                    <div class="contact-items">
+                        <a href="/cdn-cgi/l/email-protection#49282d2c3e28252c2e262d3a39263e2c3b70092e24282025672a2624" class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-paper-plane"></i></div>
+                            <div class="contact-detail">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value"><span class="__cf_email__" data-cfemail="b9d8dddcced8d5dcded6ddcac9d6cedccb80f9ded4d8d0d597dad6d4">[email&#160;protected]</span></span>
+                            </div>
+                        </a>
+                        <a href="tel:+2347063791805" class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-square-alt"></i></div>
+                            <div class="contact-detail">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+234 706 379 1805</span>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-detail">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Nigeria</span>
+                            </div>
+                        </div>
+                    </div>
 
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link")
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+
+                    <a href="images/cv.pdf" download class="btn btn-primary">
+                        <span>Download CV</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+
+                <div class="contact-form-wrapper reveal-right">
+                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/adewalegodspower9@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New message from GODE-TECH portfolio">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="Name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="Message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-text">GODE-TECH</span>
+                </a>
+                <p class="footer-text">Building digital experiences that make an impact.</p>
+                <!--<p class="footer-copyright">Copyright @ Gode-tech</p>-->
+                <!--<div class="footer-links">
+                    <a href="#header">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#portfolio">Works</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>-->
+            <div class="footer-bottom">
+                <p>&copy; 2024 GODE-TECH Dev. All rights reserved.</p>
+                <a href="#header" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Tab switching
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const tabContents = document.querySelectorAll('.tab-contents');
+
+        function opentab(tabname, element) {
+            tabLinks.forEach(link => link.classList.remove('active-link'));
+            tabContents.forEach(content => content.classList.remove('active-tab'));
+            element.classList.add('active-link');
+            document.getElementById(tabname).classList.add('active-tab');
+        }
+
+        // Mobile menu
+        const sidemenu = document.getElementById('sidemenu');
+
+        function openmenu() {
+            sidemenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closemenu() {
+            sidemenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', closemenu);
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
             }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab")
+        });
+
+        // Scroll reveal animations
+        const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Typewriter effect
+        const typewriter = document.querySelector('.typewriter');
+        if (typewriter) {
+            const text = typewriter.getAttribute('data-text');
+            let i = 0;
+            function type() {
+                if (i < text.length) {
+                    typewriter.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, 100);
+                } else {
+                    setTimeout(() => {
+                        typewriter.textContent = '';
+                        i = 0;
+                        type();
+                    }, 3000);
+                }
             }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
+            setTimeout(type, 500);
         }
+
+        // Cursor glow effect
+        const cursorGlow = document.querySelector('.cursor-glow');
+        let mouseX = 0, mouseY = 0;
+        let glowX = 0, glowY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateGlow() {
+            glowX += (mouseX - glowX) * 0.1;
+            glowY += (mouseY - glowY) * 0.1;
+            cursorGlow.style.transform = `translate(${glowX - 150}px, ${glowY - 150}px)`;
+            requestAnimationFrame(animateGlow);
+        }
+        animateGlow();
+
+
     </script>
-
-    <script>
-
-        var sidemenu = document.getElementById("sidemenu")
-
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-    </script>
-
-    </body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0ca87c0a9349a7c',t:'MTc4MTYyMDQxMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
 </html>
